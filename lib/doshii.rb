@@ -1,5 +1,5 @@
-require "doshii/version"
+require 'faraday'
+require 'json'
 
-module Doshii
-  # Your code goes here...
-end
+require 'doshii/version'
+require 'doshii/v1/location'
