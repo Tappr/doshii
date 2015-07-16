@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://369c27e8d884e0b54e56035b41eed4b07b0fc59091907418f0368ab643a4ad31:c0c0441e9bcc671dff9beb8e2a16fb43ed392f8c9a029dc8075cb71b1ac87e5f@alphasandbox.doshii.co/partner/api/v1/locations
+    body:
+      encoding: UTF-8
+      string: '{"name":"Chicken''s R Us","mobility":"fixed","availability":"closed","address_line1":"608
+        St Kilda Rd","city":"Melbourne","state":"VIC","postalCode":"3000","country":"AU","phoneNumber":"(03)
+        9005 4950","latitude":"-37.814107","longitude":"144.96327999999994"}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 16 Jul 2015 15:40:15 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '521'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"209-2ea57d52"
+      Set-Cookie:
+      - sessionId=s%3AOdL18zjJEl3HBynhfd2Opi0RiKQKlxg8.rj06nmKOCEOSvXTUJ3FpV%2F4Kt96ek01iHTgTHKZlcso;
+        Path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"checkinDuration":30,"tableMode":"selection","restaurantMode":"bistro","modeConfigured":false,"id":"54","name":"Chicken''s
+        R Us","mobility":"fixed","availability":"closed","address_line1":"608 St Kilda
+        Rd","city":"Melbourne","state":"VIC","postalCode":"3000","country":"AU","phoneNumber":"(03)
+        9005 4950","latitude":"-37.814107","longitude":"144.96327999999994","token":"GH4XeE2vrmcfcqWMArBPdaIOq_c","updatedAt":"2015-07-16T15:40:15.745Z","address_line2":null,"image":null,"promotionalImage":null,"disconnectedDate":null}'
+    http_version: 
+  recorded_at: Thu, 16 Jul 2015 15:37:53 GMT
+recorded_with: VCR 2.9.3

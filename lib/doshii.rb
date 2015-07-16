@@ -1,5 +1,9 @@
-require 'faraday'
 require 'json'
 
 require 'doshii/version'
-require 'doshii/v1/location'
+require 'doshii/configuration'
+require 'doshii/client'
+
+module Doshii
+  extend Configuration
+end

@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://369c27e8d884e0b54e56035b41eed4b07b0fc59091907418f0368ab643a4ad31:c0c0441e9bcc671dff9beb8e2a16fb43ed392f8c9a029dc8075cb71b1ac87e5f@alphasandbox.doshii.co/partner/api/v1/locations
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 16 Jul 2015 15:03:58 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1472'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"eNWkIfM95C8+/0tGup9PYw=="
+      Set-Cookie:
+      - sessionId=s%3AcY5Vvj0M-X5NSU5iVlHBS7CKmzN1zjSl.XWaq4deGAQ1diYtsnrrSsIJGJkF0hmKm1%2Fp12vGuZkM;
+        Path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"name":"SequelizeValidationError","message":"notNull Violation: name
+        cannot be null,\nnotNull Violation: mobility cannot be null,\nnotNull Violation:
+        availability cannot be null,\nnotNull Violation: address_line1 cannot be null,\nnotNull
+        Violation: city cannot be null,\nnotNull Violation: state cannot be null,\nnotNull
+        Violation: postalCode cannot be null,\nnotNull Violation: country cannot be
+        null,\nnotNull Violation: phoneNumber cannot be null,\nnotNull Violation:
+        latitude cannot be null","errors":[{"message":"name cannot be null","type":"notNull
+        Violation","path":"name","value":null},{"message":"mobility cannot be null","type":"notNull
+        Violation","path":"mobility","value":null},{"message":"availability cannot
+        be null","type":"notNull Violation","path":"availability","value":null},{"message":"address_line1
+        cannot be null","type":"notNull Violation","path":"address_line1","value":null},{"message":"city
+        cannot be null","type":"notNull Violation","path":"city","value":null},{"message":"state
+        cannot be null","type":"notNull Violation","path":"state","value":null},{"message":"postalCode
+        cannot be null","type":"notNull Violation","path":"postalCode","value":null},{"message":"country
+        cannot be null","type":"notNull Violation","path":"country","value":null},{"message":"phoneNumber
+        cannot be null","type":"notNull Violation","path":"phoneNumber","value":null},{"message":"latitude
+        cannot be null","type":"notNull Violation","path":"latitude","value":null}]}'
+    http_version: 
+  recorded_at: Thu, 16 Jul 2015 15:01:36 GMT
+recorded_with: VCR 2.9.3
