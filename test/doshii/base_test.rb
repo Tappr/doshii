@@ -7,11 +7,11 @@ module BaseTest
   }
   CREATE_CHECKIN_PARAMS = {
     name: 'John Smith', externalId: 'ias2kk2',
-    photoURL: 'http://example.com/profile.png',
+    photoURL: 'http://example.com/profile.png'
   }
   CREATE_CHECKIN_PARAMS2 = {
     name: 'William Smith', externalId: 'ias2kk3',
-    photoURL: 'http://example.com/profile2.png',
+    photoURL: 'http://example.com/profile2.png'
   }
   CREATE_ORDER_PARAMS = {
     tip: '100', status: 'pending',
