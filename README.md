@@ -44,6 +44,7 @@ rock'n'roll
 ## Usage
 
 **CHECKINS**
+
 DELETE /checkins/:checkinId
 ```ruby
 Doshii.checkin.delete :checkin_id
@@ -55,9 +56,9 @@ Doshii.checkin.find :checkin_id
 POST /checkins/:locationId
 ```ruby
 Doshii.checkin.create :location_id do |params|
-  params['name']       = 'John Smith'
-  params['externalId'] = 'ias2kk2'
-  params['photoURL']   =  'http://example.com/profile.png'
+  params[:name]       = 'John Smith'
+  params[:externalId] = 'ias2kk2'
+  params[:photoURL]   =  'http://example.com/profile.png'
 end
 ```
 or
@@ -71,7 +72,70 @@ Doshii.checkin.create :location_id do |param|
   params.merge!(checkin_params)
 end
 ```
+
 **LOCATIONS**
+
+GET /locations
+```ruby
+Doshii.location.all
+```
+POST /locations
+```ruby
+Doshii.location.create do |params|
+  params[:name]          = 'Chickens R Us'
+  params[:mobility]      =  'fixed'
+  params[:availability]  = 'closed'
+  params[:address_line1] = '608 St Kilda Rd'
+  # see the official api page for complete list of available params
+end
+```
+
+**ORDERS**
+
+GET /orders/:orderId
+```ruby
+Doshii.order.find :order_id
+```
+POST /orders/:checkinId
+```ruby
+Doshii.order.create :checkin_id do |params|
+  params[:status] = 'pending'
+  params[:items]  = [
+    {  
+      name: 'Toasted Sourdough Bread & Eggs'
+      description: 'Just ye old classic'
+      # ...
+    }
+    # ...
+  ]
+  # see the official api page for complete list of available params
+end
+```
+PUT /orders/:orderId
+```ruby
+# sample - consumer wants to pay
+Doshii.order.update :order_id do |params|
+  params[:tip]      = '0'
+  params[status]     = 'ready to pay'
+  params[:updatedAt] = '2015-05-20T23:32:58.526Z'
+end
+# sample - payment has been processed and order is updated to paid
+Doshii.order.update :order_id do |params|
+  params[:tip]           = '0'
+  params[status]         = 'ready to pay'
+  params[:updatedAt]     = '2015-05-20T23:32:58.526Z'
+  params[:transactionId] = '123'
+  params[:invoiceId]     = '123'
+end
+```
+
+**PRODUCTS**
+
+GET /products/:locationId
+```ruby
+Doshii.product.find :location_id
+```
+
 
 ## Development
 
