@@ -10,7 +10,7 @@ Add this line to your application's Gemfile:
 ```ruby
 gem 'doshii'
 ```
-or 
+or
 ```ruby
 gem 'doshii', :git => 'https://github.com/devrc-trise/doshii.git', :branch => 'develop'
 ```
@@ -22,11 +22,11 @@ And then execute:
 Or install it yourself as:
 
     $ gem install doshii
-    
+
 Run this to create configuration file ```config/initializers/doshii.rb```:
-    
+
     $ rails g doshii:install
-    
+
 Change ```config/initializers/doshii.rb``` as necessary. You might want to set values in system env or environment files to differentiate development, test and production details:
 ```ruby
 Doshii.configure do |config|
@@ -101,7 +101,7 @@ POST /orders/:checkinId
 Doshii.order.create :checkin_id do |params|
   params[:status] = 'pending'
   params[:items]  = [
-    {  
+    {
       name: 'Toasted Sourdough Bread & Eggs'
       description: 'Just ye old classic'
       # ...
@@ -115,14 +115,14 @@ PUT /orders/:orderId
 ```ruby
 # sample - consumer wants to pay
 Doshii.order.update :order_id do |params|
-  params[:tip]      = '0'
-  params[:status]     = 'ready to pay'
+  params[:tip]       = '0'
+  params[:status]    = 'ready to pay'
   params[:updatedAt] = '2015-05-20T23:32:58.526Z'
 end
 # sample - payment has been processed and order is updated to paid
 Doshii.order.update :order_id do |params|
   params[:tip]           = '0'
-  params[:status]         = 'ready to pay'
+  params[:status]        = 'ready to pay'
   params[:updatedAt]     = '2015-05-20T23:32:58.526Z'
   params[:transactionId] = '123'
   params[:invoiceId]     = '123'
