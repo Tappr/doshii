@@ -6,23 +6,25 @@ module Doshii
   module Connection
     protected
 
-    def get(url, query = {})
-      request :get, url, query
-    end
+    # def get(url, query = {})
+    #   request :get, url, query
+    # end
 
-    def post(url, query = {}, &body_block)
-      body = Hash.new
-      yield body if block_given?
-      request :post, url, query, body
-    end
+    # def post(url, query = {}, &body_block)
+    #   body = Hash.new
+    #   yield body if block_given?
+    #   request :post, url, query, body
+    # end
 
-    def put(url, body = {})
-      request :put, url, body
-    end
+    # def put(url, query = {}, &body_block)
+    #   body = Hash.new
+    #   yield body if block_given?
+    #   request :put, url, body
+    # end
 
-    def delete(url)
-      request :delete, url
-    end
+    # def delete(url)
+    #   request :delete, url
+    # end
 
     def http_connection
       @http_connection ||=
@@ -37,7 +39,9 @@ module Doshii
         end
     end
 
-    def request(method, url, query = {}, body = {})
+    def request(method, url, query = {}, &block)
+      body = Hash.new
+      yield body if block_given?
       http_connection.send(method) do |req|
         req.url url, query
         req.body = JSON.generate(body)

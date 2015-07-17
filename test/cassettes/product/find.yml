@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://369c27e8d884e0b54e56035b41eed4b07b0fc59091907418f0368ab643a4ad31:c0c0441e9bcc671dff9beb8e2a16fb43ed392f8c9a029dc8075cb71b1ac87e5f@alphasandbox.doshii.co/partner/api/v1/products/1
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 17 Jul 2015 05:08:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1270'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"yqBegqwjZkflHWu8ZqNSxQ=="
+      Set-Cookie:
+      - sessionId=s%3AkAui4hYedGEpc0C25JGBVkyvtQqfcfzS.Qq9TbVjmscdxfLr4dnWLYaA5Bi3PTvSQ3WP6%2BL%2FdVgU;
+        Path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '[{"id":"266","name":"Macchiato","description":"Macchiato","price":"340","tags":[],"product_options":[{"variants":[{"name":"Raw
+        Sugar","price":0,"pos_id":"100043"},{"name":"Sugar","price":0,"pos_id":"100041"},{"name":"Soy","price":50,"pos_id":"100029"}],"name":"Coffee
+        Mod","min":0,"max":0,"pos_id":"000020"}],"updatedAt":"2014-12-02T03:10:36.419Z","pos_id":"0000000085","image":null,"hidden":false,"override_tags":["coffee"]},{"id":"267","name":"Mocha","description":"Mocha","price":"340","tags":[],"product_options":[{"variants":[{"name":"Raw
+        Sugar","price":0,"pos_id":"100043"},{"name":"Sugar","price":0,"pos_id":"100041"},{"name":"Soy","price":50,"pos_id":"100029"}],"name":"Coffee
+        Mod","min":0,"max":0,"pos_id":"000020"}],"updatedAt":"2014-12-02T03:10:37.334Z","pos_id":"0000000086","image":null,"hidden":false,"override_tags":["coffee"]},{"id":"265","name":"Cafe
+        Latte","description":"Cafe Latte","price":"340","tags":[],"product_options":[{"variants":[{"name":"Raw
+        Sugar","price":0,"pos_id":"100043"},{"name":"Sugar","price":0,"pos_id":"100041"},{"name":"Soy","price":50,"pos_id":"100029"}],"name":"Coffee
+        Mod","min":0,"max":0,"pos_id":"000020"}],"updatedAt":"2014-12-02T03:10:35.687Z","pos_id":"0000000084","image":null,"hidden":false,"override_tags":["coffee"]}]'
+    http_version: 
+  recorded_at: Fri, 17 Jul 2015 05:06:00 GMT
+recorded_with: VCR 2.9.3

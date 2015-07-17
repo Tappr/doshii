@@ -1,43 +1,36 @@
 require './test/test_helper'
 
 class LocationTest < Minitest::Test
-  CLIENT = Doshii::Client.new
-  CREATE_LOCATION_PARAMS =
-    {
-      name: "Chicken's R Us", mobility: 'fixed', availability: 'closed',
-      address_line1: '608 St Kilda Rd', city: 'Melbourne', state: 'VIC',
-      postalCode: '3000', country: 'AU', phoneNumber: '(03) 9005 4950',
-      latitude: '-37.814107', longitude: '144.96327999999994'
-    }
+  include BaseTest
 
   def test_that_it_exists
-    assert defined?(Doshii::Client::Location)
+    assert defined?(Doshii::Client.location)
   end
 
-  def test_that_it_fails_when_invalid_params
-    VCR.use_cassette('location/create_location_invalid_params') do
-      location = CLIENT.create_location
+  def test_that_create_fails_when_invalid_params
+    VCR.use_cassette('location/create_invalid_params') do
+      location = Doshii::Client.location.create
       assert location.status == 500
       assert location.body['name'] == 'SequelizeValidationError'
       assert location.body['message'].include?('notNull Violation')
     end
   end
 
-  def test_that_it_creates_location_with_block
-    VCR.use_cassette('location/create_location') do
-      location = CLIENT.create_location do |p|
+  def test_that_it_creates_location
+    VCR.use_cassette('location/create') do
+      location = Doshii::Client.location.create do |p|
         p.merge!(CREATE_LOCATION_PARAMS)
       end
       assert location.status == 200
+      assert location.body.has_key?('id')
       assert location.body['name'] == CREATE_LOCATION_PARAMS[:name]
       assert location.body['city'] == CREATE_LOCATION_PARAMS[:city]
-      assert location.body.has_key?('id')
     end
   end
 
   def test_that_it_returns_all_locations
-    VCR.use_cassette('location/all_locations') do
-      result = CLIENT.locations
+    VCR.use_cassette('location/all') do
+      result = Doshii::Client.location.all
       refute_empty result.body
       assert_kind_of Array, result.body
       result.body.each do |loc|

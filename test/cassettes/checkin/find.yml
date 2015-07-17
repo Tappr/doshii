@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://369c27e8d884e0b54e56035b41eed4b07b0fc59091907418f0368ab643a4ad31:c0c0441e9bcc671dff9beb8e2a16fb43ed392f8c9a029dc8075cb71b1ac87e5f@alphasandbox.doshii.co/partner/api/v1/checkins/905
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 17 Jul 2015 04:57:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '164'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"a4-684e1b8f"
+      Set-Cookie:
+      - sessionId=s%3AGr_RssEkspP7cw5ia9xgJnciZ-2Lnim2.Gjn2phvCxS5hRAbCTKXm3160ipdWJy77%2FGdqeIzRqis;
+        Path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"id":"905","consumerId":"593","locationId":"60","partnerId":"5","status":"active","lastSeenDate":"2015-07-17T04:57:00.885Z","updatedAt":"2015-07-17T04:57:00.885Z"}'
+    http_version: 
+  recorded_at: Fri, 17 Jul 2015 04:54:59 GMT
+recorded_with: VCR 2.9.3

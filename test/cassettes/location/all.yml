@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://369c27e8d884e0b54e56035b41eed4b07b0fc59091907418f0368ab643a4ad31:c0c0441e9bcc671dff9beb8e2a16fb43ed392f8c9a029dc8075cb71b1ac87e5f@alphasandbox.doshii.co/partner/api/v1/locations
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 17 Jul 2015 04:54:02 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"yRPqGLnyg1qLY0gB5pExgw=="
+      Set-Cookie:
+      - sessionId=s%3ATXkYpQ_yiZad9eKqSWNc6SCSBYb-0MSB.htBaSQMsiKTg9XozWMzXjdTtvWJMhTav4fRfiDlihXE;
+        Path=/; HttpOnly
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":"41","name":"Chicken''s R Us","mobility":"fixed","availability":"closed","address_line1":"608
+        St Kilda Rd","address_line2":null,"city":"Melbourne","state":"VIC","postalCode":"3000","country":"AU","phoneNumber":"(03)
+        9005 4950","latitude":"-37.814107","longitude":"144.96327999999994","checkinDuration":30,"tableMode":"selection","image":null,"promotionalImage":null,"restaurantMode":"bistro","modeConfigured":false,"disconnectedDate":null,"token":"hsuMFyVkrmfj62UZ53kA-oOhKjY","updatedAt":"2015-07-16T05:06:01.705Z","partners_locations":{"createdAt":"2015-07-16T05:06:01.712Z","updatedAt":"2015-07-16T05:06:01.712Z","partnerId":"5","locationId":"41"}},{"id":"42","name":"Chicken''s
+        R Us","mobility":"fixed","availability":"closed","address_line1":"608 St Kilda
+        Rd","address_line2":null,"city":"Melbourne","state":"VIC","postalCode":"3000","country":"AU","phoneNumber":"(03)
+        9005 4950","latitude":"-37.814107","longitude":"144.96327999999994","checkinDuration":30,"tableMode":"selection","image":null,"promotionalImage":null,"restaurantMode":"bistro","modeConfigured":false,"disconnectedDate":null,"token":"X9ATf1wnRaN3vCJZ_ltty34eN3Q","updatedAt":"2015-07-16T10:11:31.047Z","partners_locations":{"createdAt":"2015-07-16T10:11:31.054Z","updatedAt":"2015-07-16T10:11:31.054Z","partnerId":"5","locationId":"42"}},{"id":"43","name":"Chicken''s
+        R Us","mobility":"fixed","availability":"closed","address_line1":"608 St Kilda
+        Rd","address_line2":null,"city":"Melbourne","state":"VIC","postalCode":"3000","country":"AU","phoneNumber":"(03)
+        9005 4950","latitude":"-37.814107","longitude":"144.96327999999994","checkinDuration":30,"tableMode":"selection","image":null,"promotionalImage":null,"restaurantMode":"bistro","modeConfigured":false,"disconnectedDate":null,"token":"gECiU0b7rOuuYPguxRdUo-pHQ8A","updatedAt":"2015-07-16T10:29:55.848Z","partners_locations":{"createdAt":"2015-07-16T10:29:55.855Z","updatedAt":"2015-07-16T10:29:55.854Z","partnerId":"5","locationId":"43"}},{"id":"44","name":"Chicken''s
+        R Us","mobility":"fixed","availability":"closed","address_line1":"608 St Kilda
+        Rd","address_line2":null,"city":"Melbourne","state":"VIC","postalCode":"3000","country":"AU","phoneNumber":"(03)
+        9005 4950","latitude":"-37.814107","longitude":"144.96327999999994","checkinDuration":30,"tableMode":"selection","image":null,"promotionalImage":null,"restaurantMode":"bistro","modeConfigured":false,"disconnectedDate":null,"token":"AXKvmdeR4R-J-ZQ6Ish-J--NyWU","updatedAt":"2015-07-16T13:53:26.603Z","partners_locations":{"createdAt":"2015-07-16T13:53:26.610Z","updatedAt":"2015-07-16T13:53:26.610Z","partnerId":"5","locationId":"44"}},{"id":"45","name":"Chicken''s
+        R Us","mobility":"fixed","availability":"closed","address_line1":"608 St Kilda
+        Rd","address_line2":null,"city":"Melbourne","state":"VIC","postalCode":"3000","country":"AU","phoneNumber":"(03)
+        9005 4950","latitude":"-37.814107","longitude":"144.96327999999994","checkinDuration":30,"tableMode":"selection","image":null,"promotionalImage":null,"restaurantMode":"bistro","modeConfigured":false,"disconnectedDate":null,"token":"VjAsN3DZpEwMudIDwwwX6M6ks9o","updatedAt":"2015-07-16T14:01:44.699Z","partners_locations":{"createdAt":"2015-07-16T14:01:44.705Z","updatedAt":"2015-07-16T14:01:44.705Z","partnerId":"5","locationId":"45"}},{"id":"46","name":"Chicken''s
+        R Us","mobility":"fixed","availability":"closed","address_line1":"608 St Kilda
+        Rd","address_line2":null,"city":"Melbourne","state":"VIC","postalCode":"3000","country":"AU","phoneNumber":"(03)
+        9005 4950","latitude":"-37.814107","longitude":"144.96327999999994","checkinDuration":30,"tableMode":"selection","image":null,"promotionalImage":null,"restaurantMode":"bistro","modeConfigured":false,"disconnectedDate":null,"token":"wBgrfjvGbjAACpTn-zJ9Hdek3nk","updatedAt":"2015-07-16T14:05:44.131Z","partners_locations":{"createdAt":"2015-07-16T14:05:44.136Z","updatedAt":"2015-07-16T14:05:44.136Z","partnerId":"5","locationId":"46"}},{"id":"47","name":"Chicken''s
+        R Us","mobility":"fixed","availability":"closed","address_line1":"608 St Kilda
+        Rd","address_line2":null,"city":"Melbourne","state":"VIC","postalCode":"3000","country":"AU","phoneNumber":"(03)
+        9005 4950","latitude":"-37.814107","longitude":"144.96327999999994","checkinDuration":30,"tableMode":"selection","image":null,"promotionalImage":null,"restaurantMode":"bistro","modeConfigured":false,"disconnectedDate":null,"token":"uQP6uu3PEgyN5UBx2pqMhtwFeW0","updatedAt":"2015-07-16T15:00:45.923Z","partners_locations":{"createdAt":"2015-07-16T15:00:45.929Z","updatedAt":"2015-07-16T15:00:45.929Z","partnerId":"5","locationId":"47"}},{"id":"48","name":"Chicken''s
+        R Us","mobility":"fixed","availability":"closed","address_line1":"608 St Kilda
+        Rd","address_line2":null,"city":"Melbourne","state":"VIC","postalCode":"3000","country":"AU","phoneNumber":"(03)
+        9005 4950","latitude":"-37.814107","longitude":"144.96327999999994","checkinDuration":30,"tableMode":"selection","image":null,"promotionalImage":null,"restaurantMode":"bistro","modeConfigured":false,"disconnectedDate":null,"token":"3vWhSNQNNSQhFH149KM_SvCzSTA","updatedAt":"2015-07-16T15:01:57.422Z","partners_locations":{"createdAt":"2015-07-16T15:01:57.427Z","updatedAt":"2015-07-16T15:01:57.427Z","partnerId":"5","locationId":"48"}},{"id":"49","name":"Chicken''s
+        R Us","mobility":"fixed","availability":"closed","address_line1":"608 St Kilda
+        Rd","address_line2":null,"city":"Melbourne","state":"VIC","postalCode":"3000","country":"AU","phoneNumber":"(03)
+        9005 4950","latitude":"-37.814107","longitude":"144.96327999999994","checkinDuration":30,"tableMode":"selection","image":null,"promotionalImage":null,"restaurantMode":"bistro","modeConfigured":false,"disconnectedDate":null,"token":"8b7O-3T1J5mUzM0viM9vJmMrmQo","updatedAt":"2015-07-16T15:14:10.795Z","partners_locations":{"createdAt":"2015-07-16T15:14:10.801Z","updatedAt":"2015-07-16T15:14:10.801Z","partnerId":"5","locationId":"49"}},{"id":"50","name":"Chicken''s
+        R Us","mobility":"fixed","availability":"closed","address_line1":"608 St Kilda
+        Rd","address_line2":null,"city":"Melbourne","state":"VIC","postalCode":"3000","country":"AU","phoneNumber":"(03)
+        9005 4950","latitude":"-37.814107","longitude":"144.96327999999994","checkinDuration":30,"tableMode":"selection","image":null,"promotionalImage":null,"restaurantMode":"bistro","modeConfigured":false,"disconnectedDate":null,"token":"mA9J-EpCDiqmZrj14j1DxPuWP_0","updatedAt":"2015-07-16T15:14:52.711Z","partners_locations":{"createdAt":"2015-07-16T15:14:52.716Z","updatedAt":"2015-07-16T15:14:52.716Z","partnerId":"5","locationId":"50"}},{"id":"51","name":"Chicken''s
+        R Us","mobility":"fixed","availability":"closed","address_line1":"608 St Kilda
+        Rd","address_line2":null,"city":"Melbourne","state":"VIC","postalCode":"3000","country":"AU","phoneNumber":"(03)
+        9005 4950","latitude":"-37.814107","longitude":"144.96327999999994","checkinDuration":30,"tableMode":"selection","image":null,"promotionalImage":null,"restaurantMode":"bistro","modeConfigured":false,"disconnectedDate":null,"token":"O178joaoX0QWlVVrkndElySDSMo","updatedAt":"2015-07-16T15:16:54.939Z","partners_locations":{"createdAt":"2015-07-16T15:16:54.945Z","updatedAt":"2015-07-16T15:16:54.945Z","partnerId":"5","locationId":"51"}},{"id":"52","name":"Chicken''s
+        R Us","mobility":"fixed","availability":"closed","address_line1":"608 St Kilda
+        Rd","address_line2":null,"city":"Melbourne","state":"VIC","postalCode":"3000","country":"AU","phoneNumber":"(03)
+        9005 4950","latitude":"-37.814107","longitude":"144.96327999999994","checkinDuration":30,"tableMode":"selection","image":null,"promotionalImage":null,"restaurantMode":"bistro","modeConfigured":false,"disconnectedDate":null,"token":"N8OkCb-242yQXgMTSeDubr3g9Oo","updatedAt":"2015-07-16T15:16:56.438Z","partners_locations":{"createdAt":"2015-07-16T15:16:56.443Z","updatedAt":"2015-07-16T15:16:56.443Z","partnerId":"5","locationId":"52"}},{"id":"53","name":"Chicken''s
+        R Us","mobility":"fixed","availability":"closed","address_line1":"608 St Kilda
+        Rd","address_line2":null,"city":"Melbourne","state":"VIC","postalCode":"3000","country":"AU","phoneNumber":"(03)
+        9005 4950","latitude":"-37.814107","longitude":"144.96327999999994","checkinDuration":30,"tableMode":"selection","image":null,"promotionalImage":null,"restaurantMode":"bistro","modeConfigured":false,"disconnectedDate":null,"token":"9b9a1ui2PorGcmhFJKw2hCp6c7g","updatedAt":"2015-07-16T15:39:45.079Z","partners_locations":{"createdAt":"2015-07-16T15:39:45.084Z","updatedAt":"2015-07-16T15:39:45.084Z","partnerId":"5","locationId":"53"}},{"id":"54","name":"Chicken''s
+        R Us","mobility":"fixed","availability":"closed","address_line1":"608 St Kilda
+        Rd","address_line2":null,"city":"Melbourne","state":"VIC","postalCode":"3000","country":"AU","phoneNumber":"(03)
+        9005 4950","latitude":"-37.814107","longitude":"144.96327999999994","checkinDuration":30,"tableMode":"selection","image":null,"promotionalImage":null,"restaurantMode":"bistro","modeConfigured":false,"disconnectedDate":null,"token":"GH4XeE2vrmcfcqWMArBPdaIOq_c","updatedAt":"2015-07-16T15:40:15.745Z","partners_locations":{"createdAt":"2015-07-16T15:40:15.751Z","updatedAt":"2015-07-16T15:40:15.751Z","partnerId":"5","locationId":"54"}},{"id":"55","name":"Chicken''s
+        R Us","mobility":"fixed","availability":"closed","address_line1":"608 St Kilda
+        Rd","address_line2":null,"city":"Melbourne","state":"VIC","postalCode":"3000","country":"AU","phoneNumber":"(03)
+        9005 4950","latitude":"-37.814107","longitude":"144.96327999999994","checkinDuration":30,"tableMode":"selection","image":null,"promotionalImage":null,"restaurantMode":"bistro","modeConfigured":false,"disconnectedDate":null,"token":"Xt0zRzfJCz-9eDJEI_TpQi4qYrY","updatedAt":"2015-07-17T01:16:19.104Z","partners_locations":{"createdAt":"2015-07-17T01:16:19.111Z","updatedAt":"2015-07-17T01:16:19.111Z","partnerId":"5","locationId":"55"}},{"id":"56","name":"Chicken''s
+        R Us","mobility":"fixed","availability":"closed","address_line1":"608 St Kilda
+        Rd","address_line2":null,"city":"Melbourne","state":"VIC","postalCode":"3000","country":"AU","phoneNumber":"(03)
+        9005 4950","latitude":"-37.814107","longitude":"144.96327999999994","checkinDuration":30,"tableMode":"selection","image":null,"promotionalImage":null,"restaurantMode":"bistro","modeConfigured":false,"disconnectedDate":null,"token":"lFlV5Yl9j8KD-SNOyvXVuodkqyQ","updatedAt":"2015-07-17T03:56:19.438Z","partners_locations":{"createdAt":"2015-07-17T03:56:19.444Z","updatedAt":"2015-07-17T03:56:19.444Z","partnerId":"5","locationId":"56"}},{"id":"57","name":"Chicken''s
+        R Us","mobility":"fixed","availability":"closed","address_line1":"608 St Kilda
+        Rd","address_line2":null,"city":"Melbourne","state":"VIC","postalCode":"3000","country":"AU","phoneNumber":"(03)
+        9005 4950","latitude":"-37.814107","longitude":"144.96327999999994","checkinDuration":30,"tableMode":"selection","image":null,"promotionalImage":null,"restaurantMode":"bistro","modeConfigured":false,"disconnectedDate":null,"token":"mvnnXKqkAf0P_w6gUZzMp7tq07U","updatedAt":"2015-07-17T04:33:53.036Z","partners_locations":{"createdAt":"2015-07-17T04:33:53.042Z","updatedAt":"2015-07-17T04:33:53.042Z","partnerId":"5","locationId":"57"}},{"id":"58","name":"Chicken''s
+        R Us","mobility":"fixed","availability":"closed","address_line1":"608 St Kilda
+        Rd","address_line2":null,"city":"Melbourne","state":"VIC","postalCode":"3000","country":"AU","phoneNumber":"(03)
+        9005 4950","latitude":"-37.814107","longitude":"144.96327999999994","checkinDuration":30,"tableMode":"selection","image":null,"promotionalImage":null,"restaurantMode":"bistro","modeConfigured":false,"disconnectedDate":null,"token":"L4bAIyvZ5GlmfWNvToGT7LBlYeo","updatedAt":"2015-07-17T04:42:56.675Z","partners_locations":{"createdAt":"2015-07-17T04:42:56.680Z","updatedAt":"2015-07-17T04:42:56.680Z","partnerId":"5","locationId":"58"}},{"id":"59","name":"Chicken''s
+        R Us","mobility":"fixed","availability":"closed","address_line1":"608 St Kilda
+        Rd","address_line2":null,"city":"Melbourne","state":"VIC","postalCode":"3000","country":"AU","phoneNumber":"(03)
+        9005 4950","latitude":"-37.814107","longitude":"144.96327999999994","checkinDuration":30,"tableMode":"selection","image":null,"promotionalImage":null,"restaurantMode":"bistro","modeConfigured":false,"disconnectedDate":null,"token":"0ovK3HXOvpJZmq_n3GYNzpvJ1mg","updatedAt":"2015-07-17T04:54:00.962Z","partners_locations":{"createdAt":"2015-07-17T04:54:00.967Z","updatedAt":"2015-07-17T04:54:00.967Z","partnerId":"5","locationId":"59"}}]'
+    http_version: 
+  recorded_at: Fri, 17 Jul 2015 04:51:38 GMT
+recorded_with: VCR 2.9.3

@@ -15,7 +15,7 @@ class ConfigurationTest < Minitest::Test
     end
   end
 
-  def test_that_it_ignores_invalid_options
+  def test_that_it_raise_error_for_invalid_options
     invalid = 'invalid'
     Doshii.configure do |config|
       assert_raises(NoMethodError) { config.send(invalid, invalid) }

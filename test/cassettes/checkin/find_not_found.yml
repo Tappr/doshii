@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://369c27e8d884e0b54e56035b41eed4b07b0fc59091907418f0368ab643a4ad31:c0c0441e9bcc671dff9beb8e2a16fb43ed392f8c9a029dc8075cb71b1ac87e5f@alphasandbox.doshii.co/partner/api/v1/checkins/19999991
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 17 Jul 2015 04:57:34 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '95'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"5f-e532b42"
+      Set-Cookie:
+      - sessionId=s%3APfuYqdA62h61a2KFBiaVBZd9cqY_ipLI.mAzyiX2PNGjz61YNbiuMflUxjmwlROQENxNvruVJqfQ;
+        Path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"statusCode":404,"status":404,"name":"NotFound","NotFound":true,"message":"Checkin
+        Not found"}'
+    http_version: 
+  recorded_at: Fri, 17 Jul 2015 04:55:10 GMT
+recorded_with: VCR 2.9.3
