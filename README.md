@@ -1,4 +1,5 @@
 # Doshii
+[![Gem Version](https://badge.fury.io/rb/doshii.svg)](http://badge.fury.io/rb/doshii)
 
 A Doshii API wrapper gem. Refer to [alphasandbox.doshii.co](https://alphasandbox.doshii.co/docs/partner/api/) for Doshii's API official documentation.
 
