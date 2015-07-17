@@ -31,5 +31,9 @@ module Doshii
     def find(id)
       request :get, "#{@url}/#{id}"
     end
+
+    def update(id, query = {}, &block)
+      request :put, "#{@url}/#{id}", query, &block
+    end
   end
 end

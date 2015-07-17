@@ -6,26 +6,6 @@ module Doshii
   module Connection
     protected
 
-    # def get(url, query = {})
-    #   request :get, url, query
-    # end
-
-    # def post(url, query = {}, &body_block)
-    #   body = Hash.new
-    #   yield body if block_given?
-    #   request :post, url, query, body
-    # end
-
-    # def put(url, query = {}, &body_block)
-    #   body = Hash.new
-    #   yield body if block_given?
-    #   request :put, url, body
-    # end
-
-    # def delete(url)
-    #   request :delete, url
-    # end
-
     def http_connection
       @http_connection ||=
         Faraday.new("#{endpoint}/#{version}/") do |faraday|

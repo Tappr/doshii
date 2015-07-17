@@ -2,12 +2,12 @@ require './test/test_helper'
 
 class LocationTest < Minitest::Test
   def test_that_it_exists
-    assert defined?(Doshii::Client.product)
+    assert defined?(Doshii.product)
   end
 
   def test_that_it_returns_a_product
     VCR.use_cassette('product/find') do
-      product = Doshii::Client.product.find 1
+      product = Doshii.product.find 1
       assert product.status == 200
       assert product.body.size > 0
       product.body.each do |p|

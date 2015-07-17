@@ -25,7 +25,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 17 Jul 2015 04:56:59 GMT
+      - Fri, 17 Jul 2015 08:23:23 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -35,16 +35,16 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Etag:
-      - W/"209-b18a5a40"
+      - W/"209-69ce4dba"
       Set-Cookie:
-      - sessionId=s%3ABnH0vOXsVOdc_sOzg6u_NgEt-leRBRC5.K9gEzoFB21bzgXmiOKOIoQMU7uOHisonFSewyorzGA0;
+      - sessionId=s%3AL6vHbVn_mO-s-WW-IavmdARKa7DamCE3.%2Bcjhw80xqUP%2FalaHAbpnFh80r2pAt1t5Ms0R3nhqhHI;
         Path=/; HttpOnly
     body:
       encoding: UTF-8
-      string: '{"checkinDuration":30,"tableMode":"selection","restaurantMode":"bistro","modeConfigured":false,"id":"60","name":"Chicken''s
+      string: '{"checkinDuration":30,"tableMode":"selection","restaurantMode":"bistro","modeConfigured":false,"id":"66","name":"Chicken''s
         R Us","mobility":"fixed","availability":"closed","address_line1":"608 St Kilda
         Rd","city":"Melbourne","state":"VIC","postalCode":"3000","country":"AU","phoneNumber":"(03)
-        9005 4950","latitude":"-37.814107","longitude":"144.96327999999994","token":"UZOUt1DaOiOWCm7juGzjRlgMMX8","updatedAt":"2015-07-17T04:56:59.411Z","address_line2":null,"image":null,"promotionalImage":null,"disconnectedDate":null}'
+        9005 4950","latitude":"-37.814107","longitude":"144.96327999999994","token":"vIB0tBN07ZOJpJU9d2oWKKhv8iE","updatedAt":"2015-07-17T08:23:23.871Z","address_line2":null,"image":null,"promotionalImage":null,"disconnectedDate":null}'
     http_version: 
-  recorded_at: Fri, 17 Jul 2015 04:54:35 GMT
+  recorded_at: Fri, 17 Jul 2015 08:21:00 GMT
 recorded_with: VCR 2.9.3

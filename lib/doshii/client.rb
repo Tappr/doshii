@@ -10,6 +10,10 @@ module Doshii
       resource 'locations'
     end
 
+    def order
+      resource 'orders'
+    end
+
     def product
       resource 'products'
     end
