@@ -116,13 +116,13 @@ PUT /orders/:orderId
 # sample - consumer wants to pay
 Doshii.order.update :order_id do |params|
   params[:tip]      = '0'
-  params[status]     = 'ready to pay'
+  params[:status]     = 'ready to pay'
   params[:updatedAt] = '2015-05-20T23:32:58.526Z'
 end
 # sample - payment has been processed and order is updated to paid
 Doshii.order.update :order_id do |params|
   params[:tip]           = '0'
-  params[status]         = 'ready to pay'
+  params[:status]         = 'ready to pay'
   params[:updatedAt]     = '2015-05-20T23:32:58.526Z'
   params[:transactionId] = '123'
   params[:invoiceId]     = '123'
