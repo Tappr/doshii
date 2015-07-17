@@ -1,7 +1,7 @@
 # Doshii
 [![Gem Version](https://badge.fury.io/rb/doshii.svg)](http://badge.fury.io/rb/doshii)
 
-A Doshii API wrapper gem. Refer to [alphasandbox.doshii.co](https://alphasandbox.doshii.co/docs/partner/api/) for Doshii's API official documentation.
+A Doshii API wrapper gem. Refer to [alphasandbox.doshii.co](https://alphasandbox.doshii.co/docs/partner/api/) for Doshii's official API documentation.
 
 
 ## Installation
@@ -28,7 +28,7 @@ Run this to create configuration file ```config/initializers/doshii.rb```:
 
     $ rails g doshii:install
 
-Change ```config/initializers/doshii.rb``` as necessary. You might want to set values in system env or environment files to differentiate development, test and production details:
+Change ```config/initializers/doshii.rb``` as necessary. You might want to set values in system env or environment files to differentiate development, test and production setup:
 ```ruby
 Doshii.configure do |config|
   # you might want to set these values in environment files
