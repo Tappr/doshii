@@ -1,8 +1,7 @@
 # Doshii
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/doshii`. To experiment with that code, run `bin/console` for an interactive prompt.
+A Doshii API wrapper gem. Refer to [alphasandbox.doshii.co](https://alphasandbox.doshii.co/docs/partner/api/) for Doshii's API official documentation.
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
@@ -10,6 +9,10 @@ Add this line to your application's Gemfile:
 
 ```ruby
 gem 'doshii'
+```
+or 
+```ruby
+gem 'doshii', :git => 'https://github.com/devrc-trise/doshii.git', :branch => 'develop'
 ```
 
 And then execute:
@@ -19,10 +22,56 @@ And then execute:
 Or install it yourself as:
 
     $ gem install doshii
+    
+Run this to create configuration file ```config/initializers/doshii.rb```:
+    
+    $ rails g doshii:install
+    
+Change ```config/initializers/doshii.rb``` as necessary. You might want to set values in system env or environment files to differentiate development, test and production details:
+```ruby
+Doshii.configure do |config|
+  # you might want to set these values in environment files
+  config.client_id     = '369c27e8d884e0b54e56035b41eed4b07b0fc59091907418f0368ab643a4ad31'
+  config.client_secret = 'c0c0441e9bcc671dff9beb8e2a16fb43ed392f8c9a029dc8075cb71b1ac87e5f'
+  config.endpoint      = 'https://alphasandbox.doshii.co/partner/api'
+  config.verify_ssl    = false
+  config.version       = 'v1'
+end
+```
+
+rock'n'roll
 
 ## Usage
 
-TODO: Write usage instructions here
+**CHECKINS**
+DELETE /checkins/:checkinId
+```ruby
+Doshii.checkin.delete :checkin_id
+```
+GET /checkins/:checkinId
+```ruby
+Doshii.checkin.find :checkin_id
+```
+POST /checkins/:locationId
+```ruby
+Doshii.checkin.create :location_id do |params|
+  params['name']       = 'John Smith'
+  params['externalId'] = 'ias2kk2'
+  params['photoURL']   =  'http://example.com/profile.png'
+end
+```
+or
+```ruby
+checkin_params = {
+  name: 'John Smith',
+  externalId: 'ias2kk2',
+  photoURL: 'http://example.com/profile.png'
+}
+Doshii.checkin.create :location_id do |param|
+  params.merge!(checkin_params)
+end
+```
+**LOCATIONS**
 
 ## Development
 
