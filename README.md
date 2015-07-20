@@ -90,7 +90,7 @@ POST /locations
 ```ruby
 Doshii.location.create do |params|
   params[:name]          = 'Chickens R Us'
-  params[:mobility]      =  'fixed'
+  params[:mobility]      = 'fixed'
   params[:availability]  = 'closed'
   params[:address_line1] = '608 St Kilda Rd'
   # see the official api page for complete list of available params
