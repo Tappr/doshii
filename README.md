@@ -59,7 +59,7 @@ POST /checkins/:locationId
 Doshii.checkin.create :location_id do |params|
   params[:name]       = 'John Smith'
   params[:externalId] = 'ias2kk2'
-  params[:photoURL]   =  'http://example.com/profile.png'
+  params[:photoURL]   = 'http://example.com/profile.png'
 end
 ```
 or
