@@ -28,12 +28,13 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.9"
-  spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "minitest", "~> 5.7.0"
+  spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "vcr", "~> 2.9.3"
   spec.add_development_dependency "webmock", "~> 1.21.0"
 
   spec.add_dependency "faraday", "~> 0.9.1"
   spec.add_dependency "faraday_middleware", "~> 0.10.0"
+  spec.add_dependency "hashie", "~> 3.4.2"
   spec.add_dependency "json", "~> 1.8.3"
 end

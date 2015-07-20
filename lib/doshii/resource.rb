@@ -1,4 +1,5 @@
 require 'doshii/connection'
+require 'doshii/response'
 
 module Doshii
   class Resource
@@ -16,24 +17,32 @@ module Doshii
     end
 
     def all
-      request :get, @url
+      process_response(request :get, @url)
     end
 
     def create(id = nil, query = {}, &block)
       url = id.nil? ? @url : "#{@url}/#{id}"
-      request :post, url, query, &block
+      process_response(request :post, url, query, &block)
     end
 
     def delete(id)
-      request :delete, "#{@url}/#{id}"
+      process_response(request :delete, "#{@url}/#{id}")
     end
 
     def find(id)
-      request :get, "#{@url}/#{id}"
+      process_response(request :get, "#{@url}/#{id}")
     end
 
     def update(id, query = {}, &block)
-      request :put, "#{@url}/#{id}", query, &block
+      process_response(request :put, "#{@url}/#{id}", query, &block)
+    end
+
+    private
+
+    def process_response(res)
+      return res if res.body.nil? || res.body.empty?
+      return res.body.collect { |r| Doshii::Response[r] } if res.body.is_a? Array
+      Doshii::Response[res.body]
     end
   end
 end

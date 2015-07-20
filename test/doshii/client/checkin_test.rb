@@ -13,45 +13,42 @@ class CheckinTest < Minitest::Test
 
   def test_that_it_returns_a_checkin
     VCR.use_cassette('checkin/find') do
-      checkin = Doshii.checkin.find @checkin.body['id']
-      assert checkin.status == 200
-      assert checkin.body['id'] == @checkin.body['id']
-      assert checkin.body['status'] == @checkin.body['status']
+      checkin = Doshii.checkin.find @checkin.id
+      assert checkin.id     == @checkin.id
+      assert checkin.status == @checkin.status
     end
   end
 
   def test_that_it_returns_not_found
     VCR.use_cassette('checkin/find_not_found') do
       checkin = Doshii.checkin.find 19999991
-      assert checkin.status == 404
-      assert checkin.body['message'] == 'Checkin Not found'
-      assert checkin.body['statusCode'] == 404
+      assert checkin.status     == 404
+      assert checkin.message    == 'Checkin Not found'
+      assert checkin.statusCode == 404
     end
   end
 
   def test_that_it_creates_checkin
-    assert @checkin.status == 200
-    assert @checkin.body.has_key?('id')
-    assert @checkin.body['locationId'] == @location.body['id']
+    assert @checkin.respond_to?(:id)
+    assert @checkin.locationId == @location.id
   end
 
   def test_that_create_fails_when_invalid_params
     VCR.use_cassette('checkin/create_invalid_params') do
-      checkin = Doshii.checkin.create @location.body['id']
-      assert checkin.status == 500
-      assert checkin.body['name'] == 'SequelizeValidationError'
-      assert checkin.body['message'].include?('notNull Violation')
+      checkin = Doshii.checkin.create @location.id
+      assert checkin.name == 'SequelizeValidationError'
+      assert checkin.message.include?('notNull Violation')
     end
   end
 
   def test_that_it_deletes_checkin
     VCR.use_cassette('checkin/create2') do
-      @checkin2 = Doshii.checkin.create @location.body['id'] do |p|
+      @checkin2 = Doshii.checkin.create @location.id do |p|
         p.merge!(CREATE_CHECKIN_PARAMS2)
       end
     end
     VCR.use_cassette('checkin/delete') do
-      checkin = Doshii.checkin.delete @checkin2.body['id']
+      checkin = Doshii.checkin.delete @checkin2.id
       assert checkin.status == 200
       assert checkin.body.empty?
     end
@@ -59,31 +56,34 @@ class CheckinTest < Minitest::Test
 
   def test_that_it_allocates_a_table
     create_table
-    assert @table.status == 200
-    assert @table.body['status'] == 'waiting_for_confirmation'
+    assert @table.respond_to?(:id)
+    assert @table.name   == '3'
+    assert @table.status == 'waiting_for_confirmation'
+  end
+
+  def test_that_it_does_not_allocate_a_table_when_existing
     VCR.use_cassette('checkin/table_conflict') do
-      table = Doshii.checkin.create "#{@checkin.body['id']}/table" do |p|
+      table = Doshii.checkin.create "#{@checkin.id}/table" do |p|
         p[:name] = '3'
       end
-      assert table.status == 409
-      assert table.body['message'] == 'Table allocation already exists for checkin'
+      assert table.status  == 409
+      assert table.message == 'Table allocation already exists for checkin'
     end
   end
 
   # def test_that_it_updates_a_checkin
   #   VCR.use_cassette('checkin/create3') do
-  #     @checkin4 = Doshii.checkin.create @location.body['id'] do |p|
+  #     @checkin4 = Doshii.checkin.create @location.id do |p|
   #       p.merge!(CREATE_CHECKIN_PARAMS3)
   #     end
   #   end
   #   new_status = 'cancelled'
-  #   assert @checkin3.body['status'] != new_status
+  #   assert @checkin3.status != new_status
   #   VCR.use_cassette('checkin/update') do
-  #     checkin = Doshii.checkin.update @checkin3.body['id'] do |p|
+  #     checkin = Doshii.checkin.update @checkin3.id do |p|
   #       p[:status] = new_status
   #     end
-  #     assert checkin.status == 200
-  #     assert checkin.body['status'] == new_status
+  #     assert checkin.status == new_status
   #   end
   # end
 end
