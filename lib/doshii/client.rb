@@ -18,6 +18,10 @@ module Doshii
       resource 'products'
     end
 
+    def table
+      resource 'tables'
+    end
+
     def options
       Hash[*Configuration::VALID_CONFIG_KEYS.map { |key| [key, value(key)] }.flatten]
     end

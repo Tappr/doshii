@@ -73,6 +73,12 @@ Doshii.checkin.create :location_id do |param|
   params.merge!(checkin_params)
 end
 ```
+POST /checkins/:checkinId/table
+```ruby
+Doshii.checkin.create "#{:checkin_id}/table" do |params|
+  params[:name] = '3'
+end
+```
 
 **LOCATIONS**
 
@@ -135,6 +141,13 @@ end
 GET /products/:locationId
 ```ruby
 Doshii.product.find :location_id
+```
+
+**TABLES**
+
+GET /tables/:tableId
+```ruby
+Doshii.table.find :table_id
 ```
 
 

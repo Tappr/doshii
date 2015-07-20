@@ -4,8 +4,6 @@ class OrderTest < Minitest::Test
   include BaseTest
 
   def setup
-    create_location
-    create_checkin
     create_order
   end
 

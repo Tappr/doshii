@@ -4,7 +4,6 @@ class CheckinTest < Minitest::Test
   include BaseTest
 
   def setup
-    create_location
     create_checkin
   end
 
@@ -57,4 +56,34 @@ class CheckinTest < Minitest::Test
       assert checkin.body.empty?
     end
   end
+
+  def test_that_it_allocates_a_table
+    create_table
+    assert @table.status == 200
+    assert @table.body['status'] == 'waiting_for_confirmation'
+    VCR.use_cassette('checkin/table_conflict') do
+      table = Doshii.checkin.create "#{@checkin.body['id']}/table" do |p|
+        p[:name] = '3'
+      end
+      assert table.status == 409
+      assert table.body['message'] == 'Table allocation already exists for checkin'
+    end
+  end
+
+  # def test_that_it_updates_a_checkin
+  #   VCR.use_cassette('checkin/create3') do
+  #     @checkin4 = Doshii.checkin.create @location.body['id'] do |p|
+  #       p.merge!(CREATE_CHECKIN_PARAMS3)
+  #     end
+  #   end
+  #   new_status = 'cancelled'
+  #   assert @checkin3.body['status'] != new_status
+  #   VCR.use_cassette('checkin/update') do
+  #     checkin = Doshii.checkin.update @checkin3.body['id'] do |p|
+  #       p[:status] = new_status
+  #     end
+  #     assert checkin.status == 200
+  #     assert checkin.body['status'] == new_status
+  #   end
+  # end
 end
