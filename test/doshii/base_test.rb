@@ -13,6 +13,10 @@ module BaseTest
     name: 'William Smith', externalId: 'ias2kk3',
     photoURL: 'http://example.com/profile2.png'
   }
+  # CREATE_CHECKIN_PARAMS3 = {
+  #   name: 'Charles Smith', externalId: 'ias2kk6',
+  #   photoURL: 'http://example.com/profile6.png'
+  # }
   CREATE_ORDER_PARAMS = {
     tip: '100', status: 'pending',
     items: [{

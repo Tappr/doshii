@@ -73,7 +73,7 @@ class CheckinTest < Minitest::Test
 
   # def test_that_it_updates_a_checkin
   #   VCR.use_cassette('checkin/create3') do
-  #     @checkin4 = Doshii.checkin.create @location.id do |p|
+  #     @checkin3 = Doshii.checkin.create @location.id do |p|
   #       p.merge!(CREATE_CHECKIN_PARAMS3)
   #     end
   #   end
