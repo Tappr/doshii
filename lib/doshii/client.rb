@@ -1,3 +1,9 @@
+require 'doshii/client/checkin'
+require 'doshii/client/location'
+require 'doshii/client/order'
+require 'doshii/client/product'
+require 'doshii/client/table'
+require 'doshii/connection'
 require 'doshii/resource'
 
 module Doshii
@@ -33,6 +39,32 @@ module Doshii
     def value(key)
       key = "@#{key.to_s}".to_sym
       Doshii.instance_variable_get(key)
+    end
+  end
+
+  class Client
+    include Connection
+    include Checkin
+    include Location
+    include Order
+    include Product
+    include Table
+
+    attr_accessor *Configuration::VALID_CONFIG_KEYS
+
+    def initialize(options={})
+      merged_options = Doshii.options.merge(options)
+      Configuration::VALID_CONFIG_KEYS.each do |key|
+        send("#{key}=", merged_options[key])
+      end
+    end
+
+    private
+
+    def process_response(res)
+      return res if res.body.nil? || res.body.empty?
+      return res.body.collect { |r| Doshii::Response[r] } if res.body.is_a? Array
+      Doshii::Response[res.body]
     end
   end
 end

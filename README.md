@@ -34,7 +34,7 @@ Doshii.configure do |config|
   # you might want to set these values in environment files
   config.client_id     = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
   config.client_secret = 'yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy'
-  config.endpoint      = 'https://alphasandbox.doshii.co/partner/api'
+  config.subdomain     = 'alphasandbox'
   config.verify_ssl    = false
   config.version       = 'v1'
 end

@@ -1,10 +1,10 @@
 module Doshii
   module Configuration
-    VALID_CONNECTION_KEYS = [:endpoint, :verify_ssl, :version].freeze
+    VALID_CONNECTION_KEYS = [:subdomain, :verify_ssl, :version].freeze
     VALID_OPTIONS_KEYS    = [:client_id, :client_secret].freeze
     VALID_CONFIG_KEYS     = VALID_CONNECTION_KEYS + VALID_OPTIONS_KEYS
 
-    DEFAULT_ENDPOINT      = 'https://alphasandbox.doshii.co/partner/api'
+    DEFAULT_SUBDOMAIN     = 'alphasandbox'
     DEFAULT_VERIFY_SSL    = false
     DEFAULT_VERSION       = 'v1'
 
@@ -18,10 +18,10 @@ module Doshii
     end
 
     def reset
-      @endpoint      = DEFAULT_ENDPOINT
-      @verify_ssl    = DEFAULT_VERIFY_SSL
       @client_id     = DEFAULT_CLIENT_ID
       @client_secret = DEFAULT_CLIENT_SECRET
+      @subdomain     = DEFAULT_SUBDOMAIN
+      @verify_ssl    = DEFAULT_VERIFY_SSL
       @version       = DEFAULT_VERSION
     end
 
