@@ -35,6 +35,6 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "faraday", "~> 0.9.1"
   spec.add_dependency "faraday_middleware", "~> 0.10.0"
-  spec.add_dependency "hashie", "~> 3.4.2"
+  spec.add_dependency "hashie", "~> 3.4.0"
   spec.add_dependency "json", "~> 1.8.3"
 end
