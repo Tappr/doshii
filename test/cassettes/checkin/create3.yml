@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://369c27e8d884e0b54e56035b41eed4b07b0fc59091907418f0368ab643a4ad31:c0c0441e9bcc671dff9beb8e2a16fb43ed392f8c9a029dc8075cb71b1ac87e5f@alphasandbox.doshii.co/partner/api/v1/checkins/66
+    body:
+      encoding: UTF-8
+      string: '{"name":"Samuel Smith","externalId":"ias2kk10","photoURL":"http://example.com/profile10.png"}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 22 Jul 2015 09:46:39 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '203'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"cb-d28564b"
+      Set-Cookie:
+      - sessionId=s%3ALE1vH9-H0kgBJSlwbyojAp1V8uHJQJjq.RZukZiasVpbEsGtbT%2BcjzC2WBJhcShHIQGouQEbUa7M;
+        Path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"lastSeenDate":"2015-07-22T09:46:39.370Z","id":"926","locationId":"66","consumerId":"609","partnerId":"5","status":"active","updatedAt":"2015-07-22T09:46:39.371Z","createdAt":"2015-07-22T09:46:39.371Z"}'
+    http_version: 
+  recorded_at: Wed, 22 Jul 2015 09:44:05 GMT
+recorded_with: VCR 2.9.3

@@ -71,19 +71,20 @@ class CheckinTest < Minitest::Test
     end
   end
 
-  # def test_that_it_updates_a_checkin
-  #   VCR.use_cassette('checkin/create3') do
-  #     @checkin4 = Doshii.checkin.create @location.id do |p|
-  #       p.merge!(CREATE_CHECKIN_PARAMS3)
-  #     end
-  #   end
-  #   new_status = 'cancelled'
-  #   assert @checkin3.status != new_status
-  #   VCR.use_cassette('checkin/update') do
-  #     checkin = Doshii.checkin.update @checkin3.id do |p|
-  #       p[:status] = new_status
-  #     end
-  #     assert checkin.status == new_status
-  #   end
-  # end
+  def test_that_it_updates_a_checkin
+    VCR.use_cassette('checkin/create3') do
+      @checkin3 = Doshii.checkin.create @location.id do |p|
+        p.merge!(CREATE_CHECKIN_PARAMS3)
+      end
+    end
+    new_status = 'cancelled'
+    assert @checkin3.status != new_status
+    VCR.use_cassette('checkin/update') do
+      checkin = Doshii.checkin.update @checkin3.id do |p|
+        p[:status]    = new_status
+        p[:updatedAt] = @checkin3.updatedAt
+      end
+      assert checkin.status == new_status
+    end
+  end
 end
