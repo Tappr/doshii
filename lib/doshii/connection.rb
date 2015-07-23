@@ -1,4 +1,5 @@
 require 'base64'
+require 'doshii/exceptions'
 require 'faraday'
 require 'faraday_middleware'
 
@@ -28,6 +29,8 @@ module Doshii
         req.url url, query
         req.body = JSON.generate(body)
       end
+    rescue Exception => e
+      raise Doshii::ConnectionError.new(e)
     end
 
     private

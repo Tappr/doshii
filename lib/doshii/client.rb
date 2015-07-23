@@ -4,6 +4,7 @@ require 'doshii/client/order'
 require 'doshii/client/product'
 require 'doshii/client/table'
 require 'doshii/connection'
+require 'doshii/exceptions'
 require 'doshii/resource'
 
 module Doshii
@@ -62,9 +63,10 @@ module Doshii
     private
 
     def process_response(res)
-      return res if res.body.nil? || res.body.empty?
+      return res if res.body.nil? || res.body.empty? || res.status == 404
       return res.body.collect { |r| Doshii::Response[r] } if res.body.is_a? Array
-      Doshii::Response[res.body]
+      body = Doshii::Response[res.body]
+      raise Doshii::AuthenticationError.new(body) if body.status == 401
     end
   end
 end
