@@ -12,7 +12,7 @@ module Doshii
     def http_connection
       @http_connection ||=
         Faraday.new("#{URL % { subdomain: subdomain }}/#{version}/") do |faraday|
-          faraday.response :logger
+          # faraday.response :logger
           faraday.adapter  Faraday.default_adapter
           faraday.use      Faraday::Response::ParseJson
 
@@ -25,11 +25,13 @@ module Doshii
     def request(method, url, query = {}, &block)
       body = Hash.new
       yield body if block_given?
-      http_connection.send(method) do |req|
+      response = http_connection.send(method) do |req|
         req.url url, query
         req.body = JSON.generate(body)
       end
-    rescue Exception => e
+      raise Doshii::AuthenticationError.new(response.body) if response.status == 401
+      response
+    rescue Faraday::ConnectionFailed => e
       raise Doshii::ConnectionError.new(e)
     end
 

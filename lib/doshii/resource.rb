@@ -40,10 +40,9 @@ module Doshii
     private
 
     def process_response(res)
-      return res if res.body.nil? || res.body.empty?
+      return res if (res.status != 200 && res.body.blank?) || res.status == 404
       return res.body.collect { |r| Doshii::Response[r] } if res.body.is_a? Array
       body = Doshii::Response[res.body]
-      raise Doshii::AuthenticationError.new(body) if body.status == 401
     end
   end
 end
