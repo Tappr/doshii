@@ -24,6 +24,18 @@ Or install it yourself as:
 
     $ gem install doshii
 
+
+rock'n'roll
+
+## Usage
+
+There are two ways to use Doshii:
+
+1. System wide shared configuration
+2. Per instance configuration
+
+### 1. System wide shared configuration
+
 Run this to create configuration file ```config/initializers/doshii.rb```:
 
     $ rails g doshii:install
@@ -39,10 +51,6 @@ Doshii.configure do |config|
   config.version       = 'v1'
 end
 ```
-
-rock'n'roll
-
-## Usage
 
 **CHECKINS**
 
@@ -148,6 +156,125 @@ Doshii.product.find :location_id
 GET /tables/:tableId
 ```ruby
 Doshii.table.find :table_id
+```
+
+### 2. Per instance configuration
+
+Pass configuration when defining new instance
+```ruby
+client = Doshii::Client.new(
+  client_id:     'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+  client_secret: 'yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy',
+  subdomain:     'alphasandbox', #default
+  verify_ssl:    false, #default
+  version:       'v1' #default
+)
+```
+
+**CHECKINS**
+
+DELETE /checkins/:checkinId
+```ruby
+client.delete_checkin :checkin_id
+```
+GET /checkins/:checkinId
+```ruby
+client.get_checkin :checkin_id
+```
+POST /checkins/:locationId
+```ruby
+client.create_checkin :location_id do |params|
+  params[:name]       = 'John Smith'
+  params[:externalId] = 'ias2kk2'
+  params[:photoURL]   = 'http://example.com/profile.png'
+end
+```
+or
+```ruby
+checkin_params = {
+  name: 'John Smith',
+  externalId: 'ias2kk2',
+  photoURL: 'http://example.com/profile.png'
+}
+client.create_checkin :location_id do |param|
+  params.merge!(checkin_params)
+end
+```
+POST /checkins/:checkinId/table
+```ruby
+client.allocate_table "#{:checkin_id}/table" do |params|
+  params[:name] = '3'
+end
+```
+
+**LOCATIONS**
+
+GET /locations
+```ruby
+client.list_locations
+```
+POST /locations
+```ruby
+client.create_location do |params|
+  params[:name]          = 'Chickens R Us'
+  params[:mobility]      = 'fixed'
+  params[:availability]  = 'closed'
+  params[:address_line1] = '608 St Kilda Rd'
+  # see the official api page for complete list of available params
+end
+```
+
+**ORDERS**
+
+GET /orders/:orderId
+```ruby
+client.get_order :order_id
+```
+POST /orders/:checkinId
+```ruby
+client.create_order :checkin_id do |params|
+  params[:status] = 'pending'
+  params[:items]  = [
+    {
+      name: 'Toasted Sourdough Bread & Eggs'
+      description: 'Just ye old classic'
+      # ...
+    }
+    # ...
+  ]
+  # see the official api page for complete list of available params
+end
+```
+PUT /orders/:orderId
+```ruby
+# sample - consumer wants to pay
+client.update_order :order_id do |params|
+  params[:tip]       = '0'
+  params[:status]    = 'ready to pay'
+  params[:updatedAt] = '2015-05-20T23:32:58.526Z'
+end
+# sample - payment has been processed and order is updated to paid
+client.update_order :order_id do |params|
+  params[:tip]           = '0'
+  params[:status]        = 'ready to pay'
+  params[:updatedAt]     = '2015-05-20T23:32:58.526Z'
+  params[:transactionId] = '123'
+  params[:invoiceId]     = '123'
+end
+```
+
+**PRODUCTS**
+
+GET /products/:locationId
+```ruby
+client.list_products :location_id
+```
+
+**TABLES**
+
+GET /tables/:tableId
+```ruby
+client.get_table :table_id
 ```
 
 
