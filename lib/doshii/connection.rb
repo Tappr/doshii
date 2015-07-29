@@ -30,7 +30,6 @@ module Doshii
         req.url url, query
         req.body = JSON.generate(body)
       end
-      raise Doshii::AuthenticationError.new(response.body) if response.status == 401
       process_response(response)
     rescue Faraday::ConnectionFailed => e
       raise Doshii::ConnectionError.new(e)
@@ -44,6 +43,7 @@ module Doshii
     end
 
     def process_response(res)
+      raise Doshii::AuthenticationError.new(res.body) if res.status == 401
       raise Doshii::ResponseError.new(JSON.generate(res.body || {})) if res.status != 200
       return Doshii::Response[{ status: res.status }] if res.body.nil?
       return res.body.collect { |r| Doshii::Response[r] } if res.body.is_a? Array
