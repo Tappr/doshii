@@ -58,13 +58,5 @@ module Doshii
         send("#{key}=", merged_options[key])
       end
     end
-
-    private
-
-    def process_response(res)
-      return res if (res.status != 200 && res.body.blank?) || res.status == 404
-      return res.body.collect { |r| Doshii::Response[r] } if res.body.is_a? Array
-      body = Doshii::Response[res.body]
-    end
   end
 end

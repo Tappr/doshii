@@ -38,7 +38,7 @@ module BaseTest
   def create_checkin
     create_location
     VCR.use_cassette('checkin/create') do
-      @checkin = Doshii.checkin.create @location.id do |p|
+      @checkin = Doshii.checkin.create @location.body.id do |p|
         p.merge!(CREATE_CHECKIN_PARAMS)
       end
     end
@@ -47,7 +47,7 @@ module BaseTest
   def create_order
     create_checkin
     VCR.use_cassette('order/create') do
-      @order = Doshii.order.create @checkin.id do |p|
+      @order = Doshii.order.create @checkin.body.id do |p|
         p.merge!(CREATE_ORDER_PARAMS)
       end
     end
@@ -56,7 +56,7 @@ module BaseTest
   def create_table
     create_checkin
     VCR.use_cassette('checkin/table') do
-      @table = Doshii.checkin.create "#{@checkin.id}/table" do |p|
+      @table = Doshii.checkin.create "#{@checkin.body.id}/table" do |p|
         p[:name] = '3'
       end
     end

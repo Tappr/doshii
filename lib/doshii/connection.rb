@@ -1,5 +1,6 @@
 require 'base64'
 require 'doshii/exceptions'
+require 'doshii/response'
 require 'faraday'
 require 'faraday_middleware'
 
@@ -30,7 +31,7 @@ module Doshii
         req.body = JSON.generate(body)
       end
       raise Doshii::AuthenticationError.new(response.body) if response.status == 401
-      response
+      process_response(response)
     rescue Faraday::ConnectionFailed => e
       raise Doshii::ConnectionError.new(e)
     end
@@ -40,6 +41,19 @@ module Doshii
     def base64_encoded_key
       key = "#{client_id}:#{client_secret}"
       Base64.urlsafe_encode64 key
+    end
+
+    def process_response(res)
+      response = { status: res.status }
+      unless res.body.nil?
+        response[:body] =
+          if res.body.is_a? Array
+            res.body.collect { |r| Doshii::Response[r] }
+          else
+            Doshii::Response[res.body] if res
+          end
+      end
+      Doshii::Response[response]
     end
   end
 end
