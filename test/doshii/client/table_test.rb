@@ -6,10 +6,10 @@ class CheckinTest < Minitest::Test
   def test_that_it_returns_a_table
     create_table
     VCR.use_cassette('table/find') do
-      table = Doshii.table.find @table.body.id
-      assert table.body.id     == @table.body.id
-      assert table.body.name   == @table.body.name
-      assert table.body.status == @table.body.status
+      table = Doshii.table.find @table.id
+      assert table.id     == @table.id
+      assert table.name   == @table.name
+      assert table.status == @table.status
     end
   end
 end

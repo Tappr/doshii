@@ -44,16 +44,10 @@ module Doshii
     end
 
     def process_response(res)
-      response = { status: res.status }
-      unless res.body.nil?
-        response[:body] =
-          if res.body.is_a? Array
-            res.body.collect { |r| Doshii::Response[r] }
-          else
-            Doshii::Response[res.body] if res
-          end
-      end
-      Doshii::Response[response]
+      raise Doshii::ResponseError.new(JSON.generate(res.body || {})) if res.status != 200
+      return Doshii::Response[{ status: res.status }] if res.body.nil?
+      return res.body.collect { |r| Doshii::Response[r] } if res.body.is_a? Array
+      Doshii::Response[res.body]
     end
   end
 end
