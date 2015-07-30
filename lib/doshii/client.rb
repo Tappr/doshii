@@ -4,6 +4,7 @@ require 'doshii/client/order'
 require 'doshii/client/product'
 require 'doshii/client/table'
 require 'doshii/connection'
+require 'doshii/exceptions'
 require 'doshii/resource'
 
 module Doshii
@@ -57,6 +58,13 @@ module Doshii
       Configuration::VALID_CONFIG_KEYS.each do |key|
         send("#{key}=", merged_options[key])
       end
+      raise Doshii::ConfigurationError.new('client_id and client_secret are required') if invalid_config?
+    end
+
+    private
+
+    def invalid_config?
+      @client_id.nil? || @client_id.empty? || @client_secret.nil? || @client_secret.empty?
     end
   end
 end
