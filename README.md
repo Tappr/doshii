@@ -87,6 +87,12 @@ Doshii.checkin.create "#{:checkin_id}/table" do |params|
   params[:name] = '3'
 end
 ```
+PUT /checkins/:checkinId
+```ruby
+client.checkin.update :checkin_id do |params|
+  params[:status] = 'left'
+end
+```
 
 **LOCATIONS**
 
@@ -204,6 +210,12 @@ POST /checkins/:checkinId/table
 ```ruby
 client.allocate_table "#{:checkin_id}/table" do |params|
   params[:name] = '3'
+end
+```
+PUT /checkins/:checkinId
+```ruby
+client.update_checkin :checkin_id do |params|
+  params[:status] = 'left'
 end
 ```
 
