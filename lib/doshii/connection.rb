@@ -13,7 +13,7 @@ module Doshii
     def http_connection
       @http_connection ||=
         Faraday.new("#{URL % { subdomain: subdomain }}/#{version}/") do |faraday|
-          # faraday.response :logger
+          faraday.response :logger
           faraday.adapter  Faraday.default_adapter
           faraday.use      Faraday::Response::ParseJson
 
