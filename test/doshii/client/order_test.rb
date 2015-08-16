@@ -38,20 +38,4 @@ class OrderTest < Minitest::Test
     assert error.message.include?('Validation Error')
     assert error.message.include?('required')
   end
-
-  # def test_that_it_updates_order
-  #   tip_value    = '100'
-  #   status_value = 'ready to pay'
-  #   updated_at   = '2015-07-17T08:39:24.467Z'
-  #   VCR.use_cassette('order/update') do
-  #     order = Doshii.order.update @order.id do |o|
-  #       o[:tip]       = tip_value
-  #       o[:status]    = status_value
-  #       o[:updatedAt] = updated_at
-  #     end
-  #     assert order.status == 200
-  #     assert order.tip    == new_tip_value
-  #     assert order.status == new_status_value
-  #   end
-  # end
 end

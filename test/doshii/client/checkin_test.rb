@@ -4,7 +4,7 @@ class CheckinTest < Minitest::Test
   include BaseTest
 
   def setup
-    create_checkin
+    create_table
   end
 
   def test_that_it_exists
@@ -60,7 +60,6 @@ class CheckinTest < Minitest::Test
   end
 
   def test_that_it_allocates_a_table
-    create_table
     assert @table.respond_to?(:id)
     assert @table.name   == '3'
     assert @table.status == 'waiting_for_confirmation'

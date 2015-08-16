@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 17 Jul 2015 08:26:10 GMT
+      - Sun, 16 Aug 2015 04:23:23 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -35,7 +35,7 @@ http_interactions:
       Etag:
       - W/"yqBegqwjZkflHWu8ZqNSxQ=="
       Set-Cookie:
-      - sessionId=s%3AVuCsYzRuZEabx7AgWRqxHxFtRxDEyMW6.kDVH%2F2gWka385HCYcy7A2d5XSFp1SYm3sOjpckDB8H4;
+      - sessionId=s%3AecMNWZEwWAwZ4j2bOrJTrMrG7oLfJF24.y%2FuH4ljM1zAx%2B8vnR384BnTy%2FFi82U8iA6e2%2Ba33zqg;
         Path=/; HttpOnly
     body:
       encoding: UTF-8
@@ -48,5 +48,5 @@ http_interactions:
         Sugar","price":0,"pos_id":"100043"},{"name":"Sugar","price":0,"pos_id":"100041"},{"name":"Soy","price":50,"pos_id":"100029"}],"name":"Coffee
         Mod","min":0,"max":0,"pos_id":"000020"}],"updatedAt":"2014-12-02T03:10:35.687Z","pos_id":"0000000084","image":null,"hidden":false,"override_tags":["coffee"]}]'
     http_version: 
-  recorded_at: Fri, 17 Jul 2015 08:23:46 GMT
+  recorded_at: Sun, 16 Aug 2015 04:20:03 GMT
 recorded_with: VCR 2.9.3

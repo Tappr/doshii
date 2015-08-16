@@ -1,9 +1,10 @@
 module BaseTest
   CREATE_LOCATION_PARAMS = {
-    name: "Chicken's R Us", mobility: 'fixed', availability: 'closed',
-    address_line1: '608 St Kilda Rd', city: 'Melbourne', state: 'VIC',
-    postalCode: '3000', country: 'AU', phoneNumber: '(03) 9005 4950',
-    latitude: '-37.814107', longitude: '144.96327999999994'
+    name: 'Starbucks', mobility: 'fixed', availability: 'open',
+    address_line1: '1/11-31 York Street', city: 'Sydney', state: 'NSW',
+    postalCode: '2000', country: 'AU', phoneNumber: '+61 2 9299 2126',
+    latitude: '-33.86532', longitude: '151.20535',
+    modeConfigured: true, restaurantMode: 'bistro'
   }
   CREATE_CHECKIN_PARAMS = {
     name: 'John Smith', externalId: 'ias2kk2',
@@ -18,7 +19,7 @@ module BaseTest
     photoURL: 'http://example.com/profile10.png'
   }
   CREATE_ORDER_PARAMS = {
-    tip: '100', status: 'pending',
+    tip: '100', status: 'paid', 'transactionId': '123', invoiceId: '123',
     items: [{
       id: '2', pos_id: 'toasted_bread', name: 'Toasted Sourdough Bread & Eggs',
       price: 1100, description: 'Just ye old classic', status: 'accepted'

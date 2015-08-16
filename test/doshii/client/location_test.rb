@@ -21,8 +21,9 @@ class LocationTest < Minitest::Test
   def test_that_it_creates_location
     create_location
     assert @location.respond_to?(:id)
-    assert @location.name == CREATE_LOCATION_PARAMS[:name]
-    assert @location.city == CREATE_LOCATION_PARAMS[:city]
+    assert @location.name           == CREATE_LOCATION_PARAMS[:name]
+    assert @location.city           == CREATE_LOCATION_PARAMS[:city]
+    assert @location.restaurantMode == CREATE_LOCATION_PARAMS[:restaurantMode]
   end
 
   def test_that_it_returns_all_locations

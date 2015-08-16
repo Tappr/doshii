@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 17 Jul 2015 08:23:22 GMT
+      - Sun, 16 Aug 2015 04:20:55 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -35,9 +35,9 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Etag:
-      - W/"zOl/GeZiD2F6pqYqfCDJ2Q=="
+      - W/"e03t2hqmDcWUGjz9y/xTEw=="
       Set-Cookie:
-      - sessionId=s%3AFic8A9YgweEiDSoMqQI49oenZMPHg2hw.9GnPtHOM4BCuk6WOAs83Clj8tUWPE2w2HOYpAgGIDo4;
+      - sessionId=s%3AO8j_iOBxPbe831G0pkE7-jWxh1otn0ks.K0%2B%2BPthzoULvor2Pe8m3UOPQePpBj%2B%2BhcJAOGzaaVP4;
         Path=/; HttpOnly
     body:
       encoding: ASCII-8BIT
@@ -115,7 +115,14 @@ http_interactions:
         9005 4950","latitude":"-37.814107","longitude":"144.96327999999994","checkinDuration":30,"tableMode":"selection","image":null,"promotionalImage":null,"restaurantMode":"bistro","modeConfigured":false,"disconnectedDate":null,"token":"O-OfpAVDBugS0S2HM-6c-_RYatk","updatedAt":"2015-07-17T07:19:08.414Z","partners_locations":{"createdAt":"2015-07-17T07:19:08.420Z","updatedAt":"2015-07-17T07:19:08.420Z","partnerId":"5","locationId":"64"}},{"id":"65","name":"Chicken''s
         R Us","mobility":"fixed","availability":"closed","address_line1":"608 St Kilda
         Rd","address_line2":null,"city":"Melbourne","state":"VIC","postalCode":"3000","country":"AU","phoneNumber":"(03)
-        9005 4950","latitude":"-37.814107","longitude":"144.96327999999994","checkinDuration":30,"tableMode":"selection","image":null,"promotionalImage":null,"restaurantMode":"bistro","modeConfigured":false,"disconnectedDate":null,"token":"aCY_3PrtdKvZ6aUPM0tOmuYL1SY","updatedAt":"2015-07-17T07:36:47.895Z","partners_locations":{"createdAt":"2015-07-17T07:36:47.901Z","updatedAt":"2015-07-17T07:36:47.901Z","partnerId":"5","locationId":"65"}}]'
+        9005 4950","latitude":"-37.814107","longitude":"144.96327999999994","checkinDuration":30,"tableMode":"selection","image":null,"promotionalImage":null,"restaurantMode":"bistro","modeConfigured":false,"disconnectedDate":null,"token":"aCY_3PrtdKvZ6aUPM0tOmuYL1SY","updatedAt":"2015-07-17T07:36:47.895Z","partners_locations":{"createdAt":"2015-07-17T07:36:47.901Z","updatedAt":"2015-07-17T07:36:47.901Z","partnerId":"5","locationId":"65"}},{"id":"66","name":"Chicken''s
+        R Us","mobility":"fixed","availability":"closed","address_line1":"608 St Kilda
+        Rd","address_line2":null,"city":"Melbourne","state":"VIC","postalCode":"3000","country":"AU","phoneNumber":"(03)
+        9005 4950","latitude":"-37.814107","longitude":"144.96327999999994","checkinDuration":30,"tableMode":"selection","image":null,"promotionalImage":null,"restaurantMode":"bistro","modeConfigured":false,"disconnectedDate":null,"token":"vIB0tBN07ZOJpJU9d2oWKKhv8iE","updatedAt":"2015-07-17T08:23:23.871Z","partners_locations":{"createdAt":"2015-07-17T08:23:23.877Z","updatedAt":"2015-07-17T08:23:23.877Z","partnerId":"5","locationId":"66"}},{"id":"67","name":"Starbucks","mobility":"fixed","availability":"open","address_line1":"1/11-31
+        York Street","address_line2":null,"city":"Sydney","state":"NSW","postalCode":"2000","country":"AU","phoneNumber":"+61
+        2 9299 2126","latitude":"-33.86532","longitude":"151.20535","checkinDuration":30,"tableMode":"selection","image":null,"promotionalImage":null,"restaurantMode":"bistro","modeConfigured":false,"disconnectedDate":null,"token":"APhw4dvpynzlxzUGBIWEoHzK5i4","updatedAt":"2015-08-16T03:44:57.244Z","partners_locations":{"createdAt":"2015-08-16T03:44:57.252Z","updatedAt":"2015-08-16T03:44:57.252Z","partnerId":"5","locationId":"67"}},{"id":"68","name":"Starbucks","mobility":"fixed","availability":"open","address_line1":"1/11-31
+        York Street","address_line2":null,"city":"Sydney","state":"NSW","postalCode":"2000","country":"AU","phoneNumber":"+61
+        2 9299 2126","latitude":"-33.86532","longitude":"151.20535","checkinDuration":30,"tableMode":"selection","image":null,"promotionalImage":null,"restaurantMode":"bistro","modeConfigured":false,"disconnectedDate":null,"token":"gWX-F5mL_eRM7tXD3hFNjdBzQWc","updatedAt":"2015-08-16T04:12:12.366Z","partners_locations":{"createdAt":"2015-08-16T04:12:12.373Z","updatedAt":"2015-08-16T04:12:12.373Z","partnerId":"5","locationId":"68"}}]'
     http_version: 
-  recorded_at: Fri, 17 Jul 2015 08:20:58 GMT
+  recorded_at: Sun, 16 Aug 2015 04:17:36 GMT
 recorded_with: VCR 2.9.3

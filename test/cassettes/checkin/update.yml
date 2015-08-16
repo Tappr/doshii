@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: put
-    uri: https://369c27e8d884e0b54e56035b41eed4b07b0fc59091907418f0368ab643a4ad31:c0c0441e9bcc671dff9beb8e2a16fb43ed392f8c9a029dc8075cb71b1ac87e5f@alphasandbox.doshii.co/partner/api/v1/checkins/926
+    uri: https://369c27e8d884e0b54e56035b41eed4b07b0fc59091907418f0368ab643a4ad31:c0c0441e9bcc671dff9beb8e2a16fb43ed392f8c9a029dc8075cb71b1ac87e5f@alphasandbox.doshii.co/partner/api/v1/checkins/933
     body:
       encoding: UTF-8
-      string: '{"status":"cancelled","updatedAt":"2015-07-22T09:46:39.371Z"}'
+      string: '{"status":"cancelled","updatedAt":"2015-08-16T04:15:20.533Z"}'
     headers:
       Content-Type:
       - application/json
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 22 Jul 2015 09:47:50 GMT
+      - Sun, 16 Aug 2015 04:15:21 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -33,13 +33,13 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Etag:
-      - W/"a7-70fc16e1"
+      - W/"a7-85ad19b0"
       Set-Cookie:
-      - sessionId=s%3ANk9Scp3SJYuaOJynqXYh1Mo65M-8XtO9.zZsHluh%2FISKmtNnAldJCa3W9WrQAzjoWuLzBTSSeENI;
+      - sessionId=s%3A-go4YZ4wWXUU7uEgq7FV_e8y8McAUJHl.JEWTuHb2hUl7dJXlgNHlK8GAuAFN18cKZMuwpGjMQHI;
         Path=/; HttpOnly
     body:
       encoding: UTF-8
-      string: '{"id":"926","consumerId":"609","locationId":"66","partnerId":"5","status":"cancelled","lastSeenDate":"2015-07-22T09:46:39.370Z","updatedAt":"2015-07-22T09:47:50.080Z"}'
+      string: '{"id":"933","consumerId":"613","locationId":"68","partnerId":"5","status":"cancelled","lastSeenDate":"2015-08-16T04:15:20.533Z","updatedAt":"2015-08-16T04:15:21.717Z"}'
     http_version: 
-  recorded_at: Wed, 22 Jul 2015 09:45:16 GMT
+  recorded_at: Sun, 16 Aug 2015 04:12:01 GMT
 recorded_with: VCR 2.9.3

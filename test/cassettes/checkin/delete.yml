@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://369c27e8d884e0b54e56035b41eed4b07b0fc59091907418f0368ab643a4ad31:c0c0441e9bcc671dff9beb8e2a16fb43ed392f8c9a029dc8075cb71b1ac87e5f@alphasandbox.doshii.co/partner/api/v1/checkins/918
+    uri: https://369c27e8d884e0b54e56035b41eed4b07b0fc59091907418f0368ab643a4ad31:c0c0441e9bcc671dff9beb8e2a16fb43ed392f8c9a029dc8075cb71b1ac87e5f@alphasandbox.doshii.co/partner/api/v1/checkins/934
     body:
       encoding: UTF-8
       string: "{}"
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 17 Jul 2015 08:23:47 GMT
+      - Sun, 16 Aug 2015 04:20:31 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -35,11 +35,11 @@ http_interactions:
       Etag:
       - W/"2-a3a6bf43"
       Set-Cookie:
-      - sessionId=s%3AL8QThjS-dXJx-gA-3jSsjvxCya69-tU2.YEmONivAcGjhzXhq6VKwNNUkMWDF6BHszgpUSzGeZbk;
+      - sessionId=s%3A3FJ281f9zPQjzLK0LMkI66mbIE6L_qf4.OOqxbkVVLNtx63IT1aOg5ybQjNJYYfk4ZwidhaDLWLo;
         Path=/; HttpOnly
     body:
       encoding: UTF-8
       string: "{}"
     http_version: 
-  recorded_at: Fri, 17 Jul 2015 08:21:23 GMT
+  recorded_at: Sun, 16 Aug 2015 04:17:11 GMT
 recorded_with: VCR 2.9.3

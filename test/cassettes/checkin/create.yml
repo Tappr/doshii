@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://369c27e8d884e0b54e56035b41eed4b07b0fc59091907418f0368ab643a4ad31:c0c0441e9bcc671dff9beb8e2a16fb43ed392f8c9a029dc8075cb71b1ac87e5f@alphasandbox.doshii.co/partner/api/v1/checkins/66
+    uri: https://369c27e8d884e0b54e56035b41eed4b07b0fc59091907418f0368ab643a4ad31:c0c0441e9bcc671dff9beb8e2a16fb43ed392f8c9a029dc8075cb71b1ac87e5f@alphasandbox.doshii.co/partner/api/v1/checkins/68
     body:
       encoding: UTF-8
       string: '{"name":"John Smith","externalId":"ias2kk2","photoURL":"http://example.com/profile.png"}'
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 17 Jul 2015 08:23:41 GMT
+      - Sun, 16 Aug 2015 04:12:13 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -33,13 +33,13 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Etag:
-      - W/"cb-27563334"
+      - W/"cb-6e8c1b4"
       Set-Cookie:
-      - sessionId=s%3Aoo6pZV9xfSqqzZZsCR7oz8RDgX_OW5aC.Lg3yF3CeScpjfkfxkVPFQMyXAicnPeBjcgVUuChdcXs;
+      - sessionId=s%3A1x6SoQCqMJlN4a9OpeLwYlEZQGTqmX74.EXnSr4Tssq%2ByZivt14mdQc15YZ6zRxP7Rg9XTCq73Tg;
         Path=/; HttpOnly
     body:
       encoding: UTF-8
-      string: '{"lastSeenDate":"2015-07-17T08:23:41.561Z","id":"917","locationId":"66","consumerId":"601","partnerId":"5","status":"active","updatedAt":"2015-07-17T08:23:41.562Z","createdAt":"2015-07-17T08:23:41.562Z"}'
+      string: '{"lastSeenDate":"2015-08-16T04:12:13.632Z","id":"932","locationId":"68","consumerId":"612","partnerId":"5","status":"active","updatedAt":"2015-08-16T04:12:13.632Z","createdAt":"2015-08-16T04:12:13.632Z"}'
     http_version: 
-  recorded_at: Fri, 17 Jul 2015 08:21:17 GMT
+  recorded_at: Sun, 16 Aug 2015 04:08:53 GMT
 recorded_with: VCR 2.9.3
