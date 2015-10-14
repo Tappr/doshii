@@ -46,7 +46,7 @@ Doshii.configure do |config|
   # you might want to set these values in environment files
   config.client_id     = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
   config.client_secret = 'yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy'
-  config.subdomain     = 'alphasandbox'
+  config.base_url      = 'https://alphasandbox.doshii.co'
   config.verify_ssl    = false
   config.version       = 'v1'
 end
@@ -171,7 +171,7 @@ Pass configuration when defining new instance
 client = Doshii::Client.new(
   client_id:     'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
   client_secret: 'yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy',
-  subdomain:     'alphasandbox', #default
+  base_url:      'https://alphasandbox.doshii.co', #default
   verify_ssl:    false, #default
   version:       'v1' #default
 )

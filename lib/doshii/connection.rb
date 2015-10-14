@@ -8,11 +8,11 @@ module Doshii
   module Connection
     protected
 
-    URL = "https://%{subdomain}.doshii.co/partner/api"
+    URL = "%{base_url}/partner/api"
 
     def http_connection
       @http_connection ||=
-        Faraday.new("#{URL % { subdomain: subdomain }}/#{version}/") do |faraday|
+        Faraday.new("#{URL % { base_url: base_url }}/#{version}/") do |faraday|
           faraday.response :logger
           faraday.adapter  Faraday.default_adapter
           faraday.use      Faraday::Response::ParseJson
