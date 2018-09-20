@@ -3,6 +3,7 @@ require 'doshii/client/location'
 require 'doshii/client/order'
 require 'doshii/client/product'
 require 'doshii/client/table'
+require 'doshii/client/transaction'
 require 'doshii/connection'
 require 'doshii/exceptions'
 require 'doshii/resource'
@@ -50,6 +51,7 @@ module Doshii
     include Order
     include Product
     include Table
+    include Transaction
 
     attr_accessor *Configuration::VALID_CONFIG_KEYS
 

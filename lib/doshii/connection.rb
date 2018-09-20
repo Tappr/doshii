@@ -8,7 +8,7 @@ module Doshii
   module Connection
     protected
 
-    URL = "%{base_url}/partner/api"
+    URL = "%{base_url}/partner"
 
     def http_connection
       @http_connection ||=

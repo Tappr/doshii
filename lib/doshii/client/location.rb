@@ -3,8 +3,12 @@ module Doshii
     module Location
       API_URL = 'locations'
 
-      def list_locations
+      def get_locations
         request :get, API_URL
+      end
+
+      def get_location(id)
+        request :get, "#{API_URL}/#{id}"
       end
 
       def create_location(query = {}, &block)
